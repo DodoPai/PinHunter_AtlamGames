@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BallManager : MonoBehaviour
+{
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] public float power;
+
+    
+
+     void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        Time.timeScale = 1;
+        ScoreSystem.score = 0;
+
+
+    }
+    private void Update()
+    {
+        SpaceShoot();
+
+
+    }
+    private void SpaceShoot()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+           
+            rb.AddForce(Vector3.forward * power);
+            power = 0;
+            GameManager.horizontalSpeed = 0;
+
+               
+            
+
+
+        }
+
+    }
+
+
+}
