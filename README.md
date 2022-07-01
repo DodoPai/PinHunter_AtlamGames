@@ -8,3 +8,4 @@ Youtube,Win.
 https://www.youtube.com/shorts/kumGk7hse_o
 Youtube Lose.
 https://www.youtube.com/shorts/vqSoJoJdOPY
+Game Keys: Space for throw the ball, left and right arrow keys for the aim.
