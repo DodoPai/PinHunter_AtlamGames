@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallManager : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
+    [SerializeField] public Rigidbody rb;
     [SerializeField] public float power;
 
     
@@ -17,28 +17,12 @@ public class BallManager : MonoBehaviour
 
 
     }
-    private void Update()
-    {
-        SpaceShoot();
-
-
-    }
+    
     private void SpaceShoot()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-           
-            rb.AddForce(Vector3.forward * power);
+        rb.AddForce(Vector3.forward * power);
             power = 0;
             GameManager.horizontalSpeed = 0;
-
-               
-            
-
-
-        }
-
     }
 
 

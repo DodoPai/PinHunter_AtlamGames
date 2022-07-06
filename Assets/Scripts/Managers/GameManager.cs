@@ -1,28 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject ball;
-    [SerializeField] BallManager resetpower;
-    public static int horizontalSpeed = 5;
-
-
-
+    [SerializeField] public BallManager resetpower;
+    public static float horizontalSpeed = 5f;
+    public float xRange;
+    private float horizontalInput;
+    
+    
     void FixedUpdate()
     {
         MoveBall();
-
     }
 
     public void MoveBall()
     {
-        Vector3 position = ball.transform.position;
-        position += Vector3.right * Input.GetAxis("Horizontal") * Time.fixedDeltaTime * horizontalSpeed;
-        position.x = Mathf.Clamp(position.x, -1.86f, 1.66f);
-        ball.transform.position = position;
-        ball.transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * Time.fixedDeltaTime * horizontalSpeed);
+        
+      if(transform.position.x >xRange)
+        {
+            transform.position = new Vector3(xRange, transform.position.y,transform.position.z);
+        }
+      if(transform.position.x < -xRange)
+        {
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
+        }
+        horizontalInput = CrossPlatformInputManager.GetAxis("Horizontal");
+        transform.Translate(Vector3.right * horizontalSpeed * horizontalInput * Time.deltaTime);
     }
     public void ResetBallPosition()
     {
