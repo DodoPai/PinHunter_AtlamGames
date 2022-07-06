@@ -18,7 +18,7 @@ public class BallManager : MonoBehaviour
 
     }
     
-    private void SpaceShoot()
+    public void SpaceShoot()
     {
         rb.AddForce(Vector3.forward * power);
             power = 0;

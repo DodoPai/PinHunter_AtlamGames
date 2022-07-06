@@ -1788,8 +1788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axisName: Horizontal
   axisValue: 1
-  responseSpeed: 10000
-  returnToCentreSpeed: 10000
+  responseSpeed: 10
+  returnToCentreSpeed: 10
 --- !u!114 &467760809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3931,8 +3931,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axisName: Horizontal
   axisValue: -1
-  responseSpeed: 10000
-  returnToCentreSpeed: 10000
+  responseSpeed: 10
+  returnToCentreSpeed: 10
 --- !u!114 &1221403459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4156,7 +4156,6 @@ MonoBehaviour:
   ball: {fileID: 8645507669154648140}
   resetpower: {fileID: 8645507669154648142}
   xRange: 0
-  horizontalInput: 0
 --- !u!4 &1279039437
 Transform:
   m_ObjectHideFlags: 0
@@ -9036,7 +9035,6 @@ MonoBehaviour:
   ball: {fileID: 8645507669154648140}
   resetpower: {fileID: 8645507669154648142}
   xRange: 2.2
-  horizontalInput: 0
 --- !u!114 &8645507669154648142
 MonoBehaviour:
   m_ObjectHideFlags: 0

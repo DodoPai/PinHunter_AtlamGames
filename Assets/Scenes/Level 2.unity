@@ -3173,7 +3173,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8645507669154648142}
         m_TargetAssemblyTypeName: BallManager, Assembly-CSharp
         m_MethodName: SpaceShoot
         m_Mode: 1
